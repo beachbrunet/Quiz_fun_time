@@ -5,6 +5,13 @@
 // Second: After selecting the answer it will move onto the next question.
 // Last: Quiz ends when all the questions have been answered or the timmer reaches zero.
 
+// Basic outline for questions - addEventListener
+// When user selects an answer
+// Check if it was correct
+// Inform them if they got it right or wrong
+
+
+
 
 
 // functions: the timmer decreases when the wrong answer is sleceted.
@@ -12,9 +19,16 @@
 
 
 
+// var count = 15
+// var interval = setInterval(function(){
+//     document.getElementById('count').innerHTML=count;
+//     count--;
+//     if (count === 0){
+//       clearInterval(interval);
+//       document.getElementById('count').innerHTML='Done';
+//       // alerts when out of time
+//       alert("You're out of time!");
+//     }
+//   }, 1000);
 
 
-
-var divTags = document.querySelectorAll("div");
- var pTags = document.querySelectorAll("p");
- var imgEl = document.querySelectorAll("img");
