@@ -11,6 +11,57 @@
 // Inform them if they got it right or wrong
 
 
+function handleFormSubmit(event) {
+event.preventDefault();
+ }
+
+ var score = 0;
+
+// Questions
+
+var trivaQuestions = [
+    {
+        question: "Which one of these is a Charectors you can play in Overwatch?",
+        possibles: ["Reaper", "Deathstroke", "Axion", "Sergeant-Barrister Jane Doe"],
+        answer: ["Reaper"],
+    },
+    {
+        question: "In Bungie's Destiny game series raid appeared in both Destiny and Destiny 2?",
+        possibles: ["Wrath of the Machine", "Last Wish", "Vault of Glass", "Kings Fall"],
+        answer: ["Vault of Glass"],
+    },
+    {
+        question: "In what Series where Dracula and The Grim Reaper recurring Villians",
+        possibles: ["Halo", "Dark Souls", "Soul Reaver", "Castlevania"],
+        answer: ["CastleVania"],
+    },
+    {
+        question: "Which one of these is not a Rockstar developed game?",
+        possibles: ["Grand Theft Auto (GTA)", "Assassin's Creed", "Bully", "Red Dead Redemption 2"],
+        answer: ["Assassin's Creed"],
+    },
+    {
+        question: "Kratos is the main Charecter of which game?",
+        possibles: ["God Hand", "Assassin's Creed", "God of War", "Prince of Persia"],
+        answer: ["God of War"],
+    },
+
+];
+    
+        
+        // 
+        // 
+        // Assasin's Creed
+        // God of War
+        // Prince of Persia
+
+
+
+
+
+
+
+
 
 
 
