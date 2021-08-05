@@ -3,39 +3,38 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./assets/css/jass.css">
-  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="style.css" />
   <title> How well do you know video game Trivia?</title>
 </head>
 
-<!-- Here is where the dispay of the start button and selector button -->
+<!-- Start Quiz button-->
 <body>
-<div class = "Start Button"><button> Start Quiz</button></div>
+  <div class = "containter">
+  <div id = "question-containter" class="hide"></div>
+  <div class = "question"></div>
+  <div class = "answer-container"></div>
+  <div class = "Start-Button"><button> Start Quiz</button></div>
+<div class = Instructions></div>
+<span> Test your video game knowlegde! Complete the questions in the ammount of time. 
+  <br>NOTE! Each wrong answer will default in a penlty, causing the time to complete the quiz to decrease.
+
+
+</span>
+<div class = "Continue"><button>Continue</button></div>
+
 <!-- Here is the Questions -->
 <div class = " # "</div>
 <div class = " # "</div>
 <div class = " # "</div>
 <!-- Here is check boxes for answers -->
-<ul> 
+<ol>
   <li>
-    <input type="answerbox" id="cb1" value="#" />
-    <label for="cb1">Answer 1</label>
-  </li>
-  <li>
-    <input type="answerbox" id="cb2" value="#" />
-    <label for="cb2">Answer 2</label>
-  </li>
-  <li>
-    <input type="answerbox" id="cb3" value="#" />
-    <label for="cb3">Answer 3</label>
+    <button id = "Option 1" class = "button">#</button>
+
   </li>
 
-  <li>
-    <input type="answerbox" id="cb4" value="#" />
-    <label for="cb4">Answer 4 </label>
-  </li>
-</ul>
 
+</ol>
 
 
 

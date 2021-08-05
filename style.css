@@ -1,13 +1,31 @@
-:root {
-    --brown: #a88f82;
-    --tan: #f5e1d5;
-    --teal: #71a8a7;
-    --lightteal: #d5f5f5;
-    --light: #fffaf7;
-  }
-  
-  .custom-something {
-    background-color: var(--teal);
-    color: var(--teal;
-  }
-  
+/* :root {
+  --brown: #a88f82;
+  --tan: #f5e1d5;
+  --teal: #71a8a7;
+  --lightteal: #d5f5f5;
+  --light: #fffaf7;
+} */
+
+html {
+  margin-bottom: 500px;
+  margin: auto;
+  background: rgb(48, 121, 209);
+  padding: 10px;
+}
+
+span {
+  color: whitesmoke;
+}
+
+body {
+  background-color: #447d7d;
+  font-display: arial;
+  font-size: 25px;
+}
+.Start-Button button {
+  cursor: default;
+  background-color: white;
+  block-size: 50px;
+  font-size: 25px;
+  box-shadow: rgb(0, 0, 0) 0px 10px 200px 0px rgb(0, 0, 0) 0px 1px 1px 0px;
+}

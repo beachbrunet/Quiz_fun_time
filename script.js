@@ -11,9 +11,9 @@
 // Inform them if they got it right or wrong
 
 
-function handleFormSubmit(event) {
-event.preventDefault();
- }
+// function handleFormSubmit(event) {
+// event.preventDefault();
+//  }
 
  var score = 0;
 
@@ -23,44 +23,70 @@ var trivaQuestions = [
     {
         question: "Which one of these is a Charectors you can play in Overwatch?",
         possibles: ["Reaper", "Deathstroke", "Axion", "Sergeant-Barrister Jane Doe"],
-        answer: ["Reaper"],
+        answer: 0,
     },
     {
         question: "In Bungie's Destiny game series raid appeared in both Destiny and Destiny 2?",
         possibles: ["Wrath of the Machine", "Last Wish", "Vault of Glass", "Kings Fall"],
-        answer: ["Vault of Glass"],
+        answer: 2,
     },
     {
         question: "In what Series where Dracula and The Grim Reaper recurring Villians",
         possibles: ["Halo", "Dark Souls", "Soul Reaver", "Castlevania"],
-        answer: ["CastleVania"],
+        answer: 3,
     },
     {
         question: "Which one of these is not a Rockstar developed game?",
         possibles: ["Grand Theft Auto (GTA)", "Assassin's Creed", "Bully", "Red Dead Redemption 2"],
-        answer: ["Assassin's Creed"],
+        answer: 2,
     },
     {
         question: "Kratos is the main Charecter of which game?",
         possibles: ["God Hand", "Assassin's Creed", "God of War", "Prince of Persia"],
-        answer: ["God of War"],
+        answer: 0, 
+    },
+    {
+        question: "Did you enjoy this Quiz?",
+        possibles: ["Yes", "No"],
+        answer: 0,
     },
 
 ];
-    
-        
-        // 
-        // 
-        // Assasin's Creed
-        // God of War
-        // Prince of Persia
+
+// Show me a function that shows a questions
+// Click button
+// Show next question/function
+// show done screen 
+
+// store the 
+function showQuestion(question) {
+    console.log(question)
+}
+
+
+// function showresults(result) {
+//     console.log(result)
+// }
+
+// Timer
+var time = 60
+var timePenalty = -20
+
+// Run game
+function startGame () {
+    addEventListener("click", "Start-Button").style.display = "hidden";
+
+
+}
 
 
 
 
 
+ function quiz (){}
 
-
+ function showScore (){}
+ 
 
 
 
@@ -82,4 +108,4 @@ var trivaQuestions = [
 //     }
 //   }, 1000);
 
-
+// submitButton.addEventListener ('click', showScore)
