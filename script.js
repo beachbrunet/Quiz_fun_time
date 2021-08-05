@@ -53,33 +53,39 @@ var trivaQuestions = [
 
 ];
 
-// Show me a function that shows a questions
-// Click button
-// Show next question/function
-// show done screen 
+// Function opperations. 
+// -Show me Question
+// -Select the answer
+// -Show next question/function
+// -Show done screen 
 
-// store the 
-function showQuestion(question) {
-    console.log(question)
+// function showQuestion(question) {}
+
+// function nextQuestion (){}
+
+// function selectAnswer (){}
+
+function startGame () {
+    startButton.destroy();
+
+// Run game
+document.getElementById('Start-Button')
+startButton.addEventListener("click", startGame)
+
+
+    // addEventListener("click", "Start-Button").style.display = "hidden";
+
+
 }
 
 
-// function showresults(result) {
-//     console.log(result)
-// }
+
+
+
 
 // Timer
 var time = 60
 var timePenalty = -20
-
-// Run game
-function startGame () {
-    addEventListener("click", "Start-Button").style.display = "hidden";
-
-
-}
-
-
 
 
 
