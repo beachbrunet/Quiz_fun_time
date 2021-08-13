@@ -21,7 +21,7 @@ var trivaQuestions = [
         answer: "Reaper",
     },
     {
-        question: "In Bungie's Destiny game series raid appeared in both Destiny and Destiny 2?",
+        question: "In Bungie's Destiny game series, what raid appeared in both Destiny and Destiny 2?",
         possibles: ["Wrath of the Machine", "Last Wish", "Vault of Glass", "Kings Fall"],
         answer: "Vault of Glass",
     },
@@ -48,100 +48,59 @@ var trivaQuestions = [
 
 ];
 
-// // Function opperations. 
-// // -Show me Question
-// // -Select the answer
-// // -Show next question/function
-// // -Show done screen 
+// Timer
+var time = 60
+var timePenalty = -20
+var score = 0;
+var currentQuestion = 0;
 
-// Need to start game via button
-function startGame (){
-addEventListener("click", "Start-Button").style.display = "hidden";
-}
-
-// Show questions
-function showQuestions (){
-    triviaQuestionsDiv.innerHTML = "";
-    ulCreate.innerHTML = "";
-    // loops questions through the array above
-    for (let i = 0; i < question.possibles.length; i++) {
-    let choiceButton = document.createElement('button')
-    choiceButton.textContent = question.possibles[i]
-    // add a class so that you can make event listener later
-    target.appendChild(choiceButton)
-}}
-
-// make an event listener for the choices
-// one event listener that when clicked can identify which button was clicked (event)
-// event.target.textContent
-// if condition to see if you are right
-
-
-
-
-
-
-
-
-function compare (event) {
-    let element = event.target;
-    if(element.matches("li")) {
-let newDiv = document.createElement("div");
-
-
+function handleResponse(event) {
+    var response = event.target.textContent;
+    if(response == trivaQuestions[currentQuestion].answer) {
+        score = score + 1;
     }
 
-
+    if(currentQuestion < trivaQuestions.length - 1) {
+        showQuestion(currentQuestion + 1);
+    } else {
+        alert("Your score: " + score);
+    }
 }
 
+// TO show questions and answers
+function showQuestion(indexOfQuestionToShow) {
+    currentQuestion = indexOfQuestionToShow;
 
+    var questionElement = document.querySelector('#question');
+    var theQuestion = trivaQuestions[indexOfQuestionToShow];
+    questionElement.textContent = theQuestion.question;
+    var choices = document.querySelector('#choices');
+    choices.innerHTML = "";
 
-
-
-
-
-
-Timer.addEventListener("click",function(){
- if()
+    for (let i = 0; i < theQuestion.possibles.length; i++) {
+        var choiceButton = document.createElement('button')
+        choiceButton.textContent = theQuestion.possibles[i]
+        // add a class so that you can make event listener later
+        choices.appendChild(choiceButton);
+        choiceButton.addEventListener("click", handleResponse);
+    }
 }
 
+// Function opperations.
+// -Show me Question
+// -Select the answer
+// -Show next question/function
+// -Show done screen
+
+
+function startGame () {
+    score = 0;
+    document.getElementById('intro').style.display = "none";
+    showQuestion(0);
+}
+
+document.getElementById('start-button').addEventListener("click", startGame);
 
 
 
 
-
-
-
-
-
-
-// Timer
-//var time = 60
-// var timePenalty = -20
-
-//  var count = 15
-//  var interval = setInterval(function(){
-//    document.getElementById('count').innerHTML=count;
-//  count--;
-//    if (count === 0){
-// clearInterval(interval);
-// document.getElementById('count').innerHTML='Done';
-//  alerts when out of time
-//  alert("You're out of time!");
-// }
-// }, 1000);
-
-
-// var count = 15
-// var interval = setInterval(function(){
-//    document.getElementById('count').innerHTML=count;
-// count--;
-//  if (count === 0){
-// clearInterval(interval);
-// document.getElementById('count').innerHTML='Done';
-//  alerts when out of time
-//  alert("You are out of time!");
-//  }
-// }, 1000);
-
-// submitButton.addEventListener ('click', showScore)
