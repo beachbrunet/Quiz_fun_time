@@ -4,22 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css" />
-  <title> Video Game Trivia?</title>
+  <title> Video Game Trivia</title>
 </head>
 
-<!-- Start Quiz button-->
-<body>
+
+<body><!-- Start Quiz button-->
+  <button id = "Start-Button" class = "Start Quiz">Start Quiz</button>
+  
   <div class = "containter">
     <div id = "question-containter" class="hide"></div>
-      <div id = "question"></div>
-      <div id = "answer-container"></div>
-   <!-- <div class = "Start-Button"><button> Start Quiz</button></div> -->
-    <button id = "Start-Button" class = "Start Quiz">Start Quiz</button>
+      <div id = "question"> <p>Question</p></div>
+      <div id = "choices"></div>
+      <div id= "timer"></div>
+      </div>
+
     <div class = Instructions></div>
-      <span> Test your video game knowlegde! Complete the questions in the ammount of time. 
+      <span> Test your video game knowlegde!
+        <br> Complete the questions in the ammount of time. 
   <br>NOTE! Each wrong answer will default in a penlty, causing the time to complete the quiz to decrease.
       </span>
-
   <script src= "script.js"></script>
 </body>
 </html>

@@ -1,28 +1,19 @@
-// This outline is for the game and will be written in JavaScript mostly.
-// The overall goal is a timed quiz that stores high scores.
-// First a homepage will appear with greeting and instructions and more importantly a start button to start it all off.
-// When hitting the start button: Shows the first question, timmer starts.
-// Second: After selecting the answer it will move onto the next question.
-// Last: Quiz ends when all the questions have been answered or the timmer reaches zero.
-
 // MVP (Minimum Viable Product)
-// // Shows a user a question with possible answers
+// Shows a user a question with possible answers
 // Choices are clickable
 // When choice is clicked app determines if it is correct or not
-// Show next question and let them do it again
+// Show next question --- let them do it again
 // Showing the user it's score at end
 
 
 // FEATURES (bonus which just makes it better)
-// start button
+// Start button
 // When hitting the start timer starts
-// deducting time when someone answers wrong
-// showing other peoples high scores
-// storing high scores
+// Deducting time when someone answers wrong
+// Storing high scores
+// Displays high scores
 
-
-// Questions
-
+// Questions Provided, mutiple answers to choose from, and answer string. 
 var trivaQuestions = [
     {
         question: "Which one of these is a Charectors you can play in Overwatch?",
@@ -57,73 +48,100 @@ var trivaQuestions = [
 
 ];
 
-// TO show questions and answers
-var indexOfQuestionToShow = 1
+// // Function opperations. 
+// // -Show me Question
+// // -Select the answer
+// // -Show next question/function
+// // -Show done screen 
 
-document.querySelector('#question').textContent = trivaQuestions[indexOfQuestionToShow].question
+// Need to start game via button
+function startGame (){
+addEventListener("click", "Start-Button").style.display = "hidden";
+}
 
-for (let i = 0; i < trivaQuestions[indexOfQuestionToShow].choices.length; i++) {
-	var choiceButton = document.createElement('button')
-	choiceButton.textContent = trivaQuestions[indexOfQuestionToShow].choices[i]
-	// add a class so that you can make event listener later
-	document.querySelector('#choices').appendChild(choiceButton)
+// Show questions
+function showQuestions (){
+    triviaQuestionsDiv.innerHTML = "";
+    ulCreate.innerHTML = "";
+    // loops questions through the array above
+    for (let i = 0; i < question.possibles.length; i++) {
+    let choiceButton = document.createElement('button')
+    choiceButton.textContent = question.possibles[i]
+    // add a class so that you can make event listener later
+    target.appendChild(choiceButton)
+}}
+
+// make an event listener for the choices
+// one event listener that when clicked can identify which button was clicked (event)
+// event.target.textContent
+// if condition to see if you are right
+
+
+
+
+
+
+
+
+function compare (event) {
+    let element = event.target;
+    if(element.matches("li")) {
+let newDiv = document.createElement("div");
+
+
+    }
+
+
 }
 
 
-// Function opperations. 
-// -Show me Question
-// -Select the answer
-// -Show next question/function
-// -Show done screen 
 
-// function showQuestion(question) {}
 
-// function nextQuestion (){}
 
-// function selectAnswer (){}
 
-function startGame () {
-    startButton.destroy();
-    // addEventListener("click", "Start-Button").style.display = "hidden";
 
-// Run game
-document.getElementById('Start-Button');
-startButton.addEventListener("click", startGame)
 
+Timer.addEventListener("click",function(){
+ if()
 }
+
+
+
+
+
+
+
 
 
 
 
 // Timer
-var time = 60
-var timePenalty = -20
+//var time = 60
+// var timePenalty = -20
 
-
-
- function quiz (){}
-
- function showScore (){}
- 
-
-
-
-
-// functions: the timmer decreases when the wrong answer is sleceted.
-// Save the inital score
-
+//  var count = 15
+//  var interval = setInterval(function(){
+//    document.getElementById('count').innerHTML=count;
+//  count--;
+//    if (count === 0){
+// clearInterval(interval);
+// document.getElementById('count').innerHTML='Done';
+//  alerts when out of time
+//  alert("You're out of time!");
+// }
+// }, 1000);
 
 
 // var count = 15
 // var interval = setInterval(function(){
-//     document.getElementById('count').innerHTML=count;
-//     count--;
-//     if (count === 0){
-//       clearInterval(interval);
-//       document.getElementById('count').innerHTML='Done';
-//       // alerts when out of time
-//       alert("You're out of time!");
-//     }
-//   }, 1000);
+//    document.getElementById('count').innerHTML=count;
+// count--;
+//  if (count === 0){
+// clearInterval(interval);
+// document.getElementById('count').innerHTML='Done';
+//  alerts when out of time
+//  alert("You are out of time!");
+//  }
+// }, 1000);
 
 // submitButton.addEventListener ('click', showScore)
